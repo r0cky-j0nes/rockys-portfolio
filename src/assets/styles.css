@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-/* Make root full-height and flex container */
+
 html, body, #root {
   height: 100%;
 }
@@ -19,7 +19,7 @@ html, body, #root {
   flex-direction: column;
 }
 
-/* Ensure main content expands to push footer down */
+
 main {
   flex: 1;
 }
@@ -41,13 +41,13 @@ button {
 }
 
 /* Header styles */
-/* Header show-on-scroll */
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  transform: translateY(-100%);      /* hide above viewport */
+  transform: translateY(-100%);      
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
   background-color: #000000;
@@ -59,7 +59,7 @@ button {
 }
 
 .header.visible {
-  transform: translateY(0);          /* slide into view */
+  transform: translateY(0);          
 }
 
 
@@ -238,7 +238,6 @@ button[type="submit"]:hover {
   align-items: center;
   max-width: 1000px;
   background: #00000000;
-  /*border: 2px solid #8031A7;*/
   overflow: hidden;
 }
 
@@ -304,14 +303,14 @@ button[type="submit"]:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Send behind your app’s content */
+  z-index: -1; 
 }
 
-/* Center the InfoCard + buttons vertically under each other */
+/*  InfoCard */
 .about-card-section {
   display: flex;
-  flex-direction: column;   /* stack children in a column */
-  align-items: center;      /* center them horizontally */
+  flex-direction: column;   
+  align-items: center;      
   padding: -2rem 0rem;
   margin-top: -2rem;
 

@@ -1,23 +1,22 @@
 import React from 'react';
 
-// Define your project entries here
 const projects = [
   {
     title: 'Weather App',
     description: 'A Vue.js weather application showing hourly and 5-day forecasts using OpenWeather API.',
-    imageUrl: './assets/weather-app.png',
+    imageUrl: '${process.env.PUBLIC_URL}/assets/weather-app.png',
     link: 'https://r0cky-j0nes.github.io/jones_web125_weatherapp/'
   },
   {
     title: 'Price Calculator',
     description: 'A tool to help clients view services and prices. Allowing calculations to view total price',
-    imageUrl: '/assets/pricelist.png',
+    imageUrl: '${process.env.PUBLIC_URL}/assets/pricelist.png',
     link: 'https://r0cky-j0nes.github.io/BRW-priceList/'
   },
   {
     title: 'County Website Redesign',
     description: 'Redesigned Macon County, NC website using Bootstrap and CSS Grid for responsive layouts.',
-    imageUrl: './assets/images/county-redesign.png',
+    imageUrl: '${process.env.PUBLIC_URL}/assets/images/county-redesign.png',
     link: 'https://r0cky-j0nes.github.io/maconCounty/'
   }
 ];
