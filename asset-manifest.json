@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/rockys-portfolio/static/css/main.df93391f.css",
+    "main.js": "/rockys-portfolio/static/js/main.daeb4ea3.js",
+    "static/media/wavememoji.png": "/rockys-portfolio/static/media/wavememoji.ee89450dc8208ea474cd.png",
+    "static/media/memoji.png": "/rockys-portfolio/static/media/memoji.1245f930bd714b33704d.png",
+    "static/media/logo.png": "/rockys-portfolio/static/media/logo.06733fa3e057c7b3d7d6.png",
+    "index.html": "/rockys-portfolio/index.html",
+    "main.df93391f.css.map": "/rockys-portfolio/static/css/main.df93391f.css.map",
+    "main.daeb4ea3.js.map": "/rockys-portfolio/static/js/main.daeb4ea3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df93391f.css",
+    "static/js/main.daeb4ea3.js"
+  ]
+}
