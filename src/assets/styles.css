@@ -1,0 +1,440 @@
+/* Google Font import*/
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+/* Reset & global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make root full-height and flex container */
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure main content expands to push footer down */
+main {
+  flex: 1;
+}
+
+body {
+  font-family: 'YourFontName', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Header styles */
+/* Header show-on-scroll */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);      /* hide above viewport */
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header.visible {
+  transform: translateY(0);          /* slide into view */
+}
+
+
+.header__nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.header__nav-list li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.header__nav-list li a:hover {
+  opacity: 0.8;
+}
+
+.header__nav-list li a.active {
+  border-bottom: 2px solid black;
+  padding-bottom: 0.25rem;
+}
+
+/* Project page styles */
+.projects-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  margin: 1rem;
+}
+
+.project-description {
+  flex-grow: 1;
+  margin: 0 1rem 1rem;
+  line-height: 1.4;
+}
+
+.project-link {
+  display: block;
+  text-align: center;
+  background-color: #8031A7;
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 1rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.project-link:hover {
+  background-color: #671e8f;
+}
+
+/* Contact page styles */
+.contact-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.contact-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #8031A7;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #671e8f;
+}
+
+/* Footer styles */
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Loading screen */
+.loading-screen {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8031A7;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid black;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* About Card Styles */
+.about-card-section {
+  display: flex;
+  justify-content: center;
+  padding: 0rem 1rem;
+  
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  background: #00000000;
+  /*border: 2px solid #8031A7;*/
+  overflow: hidden;
+}
+
+.about-card-image {
+  display: block;
+  margin: 1.5rem auto 1rem;
+  width: 312px;
+  height: 312px;
+  margin: 2.6rem 2.6rem;
+}
+
+
+.about-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+
+.about-card-text {
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: -3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical centering */
+  align-items: center;      /* horizontal centering */
+}
+
+.about-card-name {
+  margin: 0;
+  font-size: 3rem;
+  color: #000;
+  font-family: 'Shadows Into Light', sans-serif;
+}
+
+.about-card-role {
+  margin: .5rem 0rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+
+/* Typewriter caret */
+.typing {
+  border-right: 2px solid #8031A7;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-caret 0.7s step-end infinite;
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+/* RainbowAnimation*/
+.rainbow-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send behind your app’s content */
+}
+
+/* Center the InfoCard + buttons vertically under each other */
+.about-card-section {
+  display: flex;
+  flex-direction: column;   /* stack children in a column */
+  align-items: center;      /* center them horizontally */
+  padding: -2rem 0rem;
+  margin-top: -2rem;
+
+}
+
+/* Buttons */
+.about-card-buttons {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  gap: 1rem;
+  margin: 0rem 0;
+}
+
+.btn {
+  padding: 0.70rem 1rem;
+  border: 4px solid black;
+  border-radius: 40%;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  background-color: #000000;
+}
+
+.btn-left {
+  animation: fadeInLeft 1.2s ease forwards;
+}
+
+.btn-right {
+  animation: fadeInRight 1.2s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* “About Da Rock” section */
+.about-da-rock-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.about-da-rock-section h1 {
+    text-align: left;
+    font-family: 'Fredericka the Great', sans-serif;
+    font-size: 4rem;
+    
+}
+
+.about-panel {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-panel h2 {
+  margin-bottom: 1rem;
+}
+
+.about-panel ul {
+  list-style: disc inside;
+  margin: 1rem 0;
+}
+
+.about-panel li {
+  margin-bottom: 0.5rem;
+}
+
+.about-panel .btn-download {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background: #8031A7;
+  color: #fff;
+  cursor: pointer;
+}
+
+.about-aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-panel{
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.bio-panel h2 {
+  margin-bottom: 1rem;
+}
+
+
+/* Skills badges */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 0.75rem;
+  justify-content: center; 
+  margin: 1rem;
+  
+}
+
+
+.skill-badge {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  
+}
